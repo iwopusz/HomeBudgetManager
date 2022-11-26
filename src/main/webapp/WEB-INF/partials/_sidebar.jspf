@@ -65,5 +65,11 @@
               <span class="menu-title">Documentation</span>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="documentation/documentation.html">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title">Testowa podstrona</span>
+            </a>
+          </li>
         </ul>
       </nav>

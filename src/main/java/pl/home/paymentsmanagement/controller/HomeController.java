@@ -17,5 +17,10 @@ public class HomeController {
         return "index";
     }
 
+    @GetMapping("/original")
+    public String getHomeOriginal(Model model) {
+        return "index_original_source";
+    }
+
 
 }
