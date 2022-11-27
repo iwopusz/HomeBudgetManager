@@ -36,42 +36,60 @@
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
+            <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="display-3">Użytkownik</h4>
+                  <h4 class="card-title">Striped Table</h4>
                   <p class="card-description">
-                    <!--  sumie nie wiem co ma tu być -->
+                    Add class <code>.table-striped</code>
                   </p>
-                  <form class="forms-sample">
-                    <div class="form-group">
-                      <label for="exampleInputUsername1">Imię</label>
-                      <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Nazwisko</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Dochód</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                    </div>
-                    <button type="submit" class="btn btn-primary me-2">Zapisz</button>
-                    <button class="btn btn-light">Anuluj</button>
-                  </form>
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <thead>
+                      <tr>
+                        <th>
+                          Miniaturka
+                        </th>
+                        <th>
+                          Imię i Nazwisko
+                        </th>
+                        <th>
+                          Email
+                        </th>
+                        <th>
+                          Akcje
+                        </th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <c:forEach items="${users}" var="person">
+                      <tr>
+                        <td class="py-1">
+                          <img src="../../../resources/images/faces/face1.jpg" alt="image"/>
+                        </td>
+                        <td>
+                          ${person.firstName} ${person.lastName}
+                        </td>
+                        <td>
+                          ${person.email}
+                        </td>
+                        <td>
+                          USUN EDYTUJ
+                        </td>
+                      </tr>
+                      </c:forEach>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- content-wrapper ends -->
-        <!-- partial:../../partials/_footer.jspf -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.PorozmawiajZBartkiem.pl/" target="_blank">PorozmawiajZBartkiem.pl </a>2021</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a href="https://www.PorozmawiajZBartkiem.pl/" target="_blank"> PorozmawiajZBartkiem.pl </a> templates</span>
-          </div>
-          <!-- partial -->
+        <!-- partial:partials/_footer.jspf -->
+        <%@include file="../../partials/_footer.jspf" %>
+        <!-- partial -->
       </div>
       <!-- main-panel ends -->
     </div>
