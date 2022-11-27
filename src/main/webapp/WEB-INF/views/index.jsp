@@ -33,6 +33,8 @@
       <!-- partial:partials/_sidebar.jspf -->
       <%@include file="../partials/_sidebar.jspf" %>
       <!-- partial -->
+      ${person}
+      TEST:adasdasdasdasdasdasdasdasdbniasnd jdsfnkjnsdfjknaskjdfnkjasdnfkjasdnfaskdf
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
@@ -104,6 +106,7 @@
               <div class="card">
                 <div class="card-body">
                   <p class="card-title">Sales details</p>
+
                   <p class="text-muted font-weight-light">Received overcame oh sensible so at an. Formed do change merely to county it. Am separate contempt domestic to to oh. On relation my so addition branched.</p>
                   <div id="sales-legend" class="chartjs-legend mt-4 mb-2"></div>
                   <canvas id="sales-chart"></canvas>

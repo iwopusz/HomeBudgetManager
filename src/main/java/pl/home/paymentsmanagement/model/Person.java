@@ -10,7 +10,7 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-public class Persons {
+public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,10 +19,10 @@ public class Persons {
     private String lastName;
     private String password;
 
-    @ManyToMany(mappedBy = "persons")
+    @ManyToMany(mappedBy = "people")
     private Set<Household> households;
 
-    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL, mappedBy = "persons")
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL, mappedBy = "person")
     private Set<Transaction> transactionsList = new HashSet<>();
 
 }

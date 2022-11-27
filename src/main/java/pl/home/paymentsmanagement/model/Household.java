@@ -25,8 +25,8 @@ public class Household{
     @ManyToMany
     @JoinTable(name = "household_users",
     joinColumns = @JoinColumn(name = "household_id"),
-    inverseJoinColumns = @JoinColumn(name = "persons_id"))
-    private Set<Persons> persons = new HashSet<>();
+    inverseJoinColumns = @JoinColumn(name = "person_id"))
+    private Set<Person> people = new HashSet<>();
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "households")
     private Set<Transaction> transactions = new HashSet<>();
