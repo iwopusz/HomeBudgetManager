@@ -4,7 +4,6 @@ package pl.home.paymentsmanagement.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.GenericGenerator;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.math.BigDecimal;
@@ -16,9 +15,9 @@ import java.util.Date;
 public class Transaction {
 
     @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
-    private String id;
+//    @GeneratedValue(generator = "uuid")
+//    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private Long id;
     private String name;
 
     @Enumerated(EnumType.STRING)
@@ -44,8 +43,8 @@ public class Transaction {
     private Household households;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "persons_id")
-    private Persons persons;
+    @JoinColumn(name = "person_id")
+    private Person person;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "charger_id")
