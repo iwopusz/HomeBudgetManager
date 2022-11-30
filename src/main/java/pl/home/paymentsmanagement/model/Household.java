@@ -28,7 +28,7 @@ public class Household{
     inverseJoinColumns = @JoinColumn(name = "person_id"))
     private Set<Person> people = new HashSet<>();
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "households")
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "household")
     private Set<Transaction> transactions = new HashSet<>();
 
 }
