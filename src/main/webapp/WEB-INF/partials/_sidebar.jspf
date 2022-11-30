@@ -66,9 +66,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="documentation/documentation.html">
-              <i class="ti-write menu-icon"></i>
-              <span class="menu-title">Testowa podstrona</span>
+            <a class="nav-link" href="/manage/users">
+              <i class="ti-pie-chart menu-icon"></i>
+              <span class="menu-title">Lista userów</span>
             </a>
           </li>
         </ul>
