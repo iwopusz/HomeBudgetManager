@@ -2,7 +2,9 @@ package pl.home.paymentsmanagement.model;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -12,9 +14,12 @@ import java.util.Date;
 @Entity(name = "transaction")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Transaction {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 //    @GeneratedValue(generator = "uuid")
 //    @GenericGenerator(name = "uuid", strategy = "uuid2")
     private Long id;
@@ -40,7 +45,7 @@ public class Transaction {
 
     @ManyToOne
     @JoinColumn(name = "household_id")
-    private Household households;
+    private Household household;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "person_id")
