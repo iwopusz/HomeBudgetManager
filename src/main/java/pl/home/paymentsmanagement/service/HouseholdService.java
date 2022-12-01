@@ -18,4 +18,16 @@ public class HouseholdService {
     public List<Household> getHouseholdList() {
         return householdRepository.findAll();
     }
+
+    public void addHousehold(Household household){
+        householdRepository.save(household);
+    }
+
+    public Household getHousehold(Long id){
+        return householdRepository.findById(id).orElse(null);
+    }
+
+    public void editHousehold(Household household){
+        householdRepository.save(household);
+    }
 }
