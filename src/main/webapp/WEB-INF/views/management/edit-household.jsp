@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
-                            <form method="post" action='<c:url value="/edit-household"/> '>
+                            <form method="post" action='<c:url value="/edit-household/${household.id}"/> '>
                                 <div class="card-body">
                                     <h4 class="display-3">Gospodarstwo</h4>
                                     <p class="card-description">
@@ -34,22 +34,23 @@
                                     <div class="form-group">
                                         <label for="exampleInputUsername1">Nazwa</label>
                                         <input type="text" class="form-control" name="name" id="exampleInputUsername1"
-                                               placeholder="Username">
+                                               placeholder="Username" value="${household.name}">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Adres</label>
                                         <input type="text" class="form-control" name="address" id="exampleInputEmail1"
-                                               placeholder="address">
+                                               placeholder="address" value="${household.address}">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Miasto</label>
                                         <input type="text" class="form-control" name="city" id="exampleInputEmail1"
-                                               placeholder="city">
+                                               placeholder="city" value="${household.city}">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Aktualny budżet</label>
-                                        <input type="number" class="form-control form-control-sm mt-2" step=".01" placeholder="0,00" name="current_balance"/>
+                                        <input type="number" class="form-control form-control-sm mt-2" step=".01" placeholder="0,00"
+                                               name="current_balance" value="${household.current_balance}"/>
                                     </div>
 
                                     <div class="card-body">

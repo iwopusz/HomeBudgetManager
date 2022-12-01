@@ -10,6 +10,7 @@ import pl.home.paymentsmanagement.service.HouseholdService;
 import pl.home.paymentsmanagement.service.PersonService;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class HouseholdController {
@@ -33,11 +34,11 @@ public class HouseholdController {
     @GetMapping("/edit-household/{id}")
     public String getEditHousehold(@PathVariable("id") Long id, Model model){
         List<Person> people = personService.getPersons();
-        people.stream().
+        List<Person> fileterPeopel = people.stream().
                 filter((Person perosn)->{
-                    return perosn.getId().equals(id);
-                });
-        model.addAttribute("people", people);
+                    return perosn.getHouseholds().equals(id);
+                }).collect(Collectors.toList());
+        model.addAttribute("people", fileterPeopel);
         Household household = householdService.getHousehold(id);
         model.addAttribute("household", household);
         return "management/edit-household";
