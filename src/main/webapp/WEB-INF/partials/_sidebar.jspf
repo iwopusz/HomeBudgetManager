@@ -1,3 +1,7 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
@@ -69,6 +73,12 @@
             <a class="nav-link" href="/manage/users">
               <i class="ti-pie-chart menu-icon"></i>
               <span class="menu-title">Lista userów</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href='<c:url value="/chargers"/>'>
+              <i class="ti-pie-chart menu-icon"></i>
+              <span class="menu-title">Lista dostawców</span>
             </a>
           </li>
         </ul>
