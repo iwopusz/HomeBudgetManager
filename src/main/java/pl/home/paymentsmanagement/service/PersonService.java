@@ -18,10 +18,17 @@ public class PersonService {
         return personRepository.findAll();
     }
 
+    public List<Person> getPersonByHouseholdId(Long id){
+        return personRepository.findAllPersonsHouseholds(id);
+    }
+
+
     public Person getPerson(Long id) {
         return personRepository.findById(id).orElse(null);
     }
     public void editPerson(Person person) {
         personRepository.save(person);
     }
+
+
 }

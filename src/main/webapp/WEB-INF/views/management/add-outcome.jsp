@@ -82,8 +82,8 @@
                                                     <div class="col-sm-3">
                                                         <select class="form-control form-control-sm mt-2" name="charger.id">
                                                             <option hidden>Dostawca</option>
-                                                            <c:forEach items="${chargers}" var="charger">
-                                                                <option value="${charger.id}">${charger.name}</option>
+                                                            <c:forEach items="${chargers}" var="households">
+                                                                <option value="${households.id}">${households.name}</option>
                                                             </c:forEach>
                                                         </select>
                                                     </div>

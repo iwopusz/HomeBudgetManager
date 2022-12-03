@@ -31,4 +31,6 @@ public class Household{
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "household")
     private Set<Transaction> transactions = new HashSet<>();
 
+
+
 }

@@ -25,8 +25,11 @@
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
                             <form method="post" action='<c:url value="/add-household"/> '>
+                                <div class="card-header py-3">
+                                    <h5 class="m-0 font-weight-bold text-primary">Gospodarstwo</h5>
+                                </div>
                                 <div class="card-body">
-                                    <h4 class="display-3">Gospodarstwo</h4>
+
                                     <p class="card-description">
                                         Podaj szczegóły:
                                     </p>
@@ -60,13 +63,13 @@
                                                 <tr>
                                                     <th>Imię</th>
                                                     <th>Nazwisko</th>
-                                                    <th> <button type="submit" class="btn btn-primary me-2">+</button></th>
+                                                    <th> <button type="submit" class="btn btn-outline-success">+</button></th>
                                                 </tr>
                                                 </thead>
                                             </table>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary me-2">Zapisz</button>
+                                    <button type="submit" class="btn btn-outline-success">Zapisz</button>
                                     <!-- <button class="btn btn-light">Anuluj</button> -->
                                 </div>
                                 <div>
