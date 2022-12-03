@@ -46,7 +46,7 @@
                                     <!--  ja tym bardziej -->
                                 </p>
                                 <form method="post" id="add-charger"
-                                      action='<c:url value="/addCharger/{id}"/>'>
+                                      action='<c:url value="/addCharger"/>'>
 
                                     <div class="form-group">
                                         <label for="name">Nazwa</label>
