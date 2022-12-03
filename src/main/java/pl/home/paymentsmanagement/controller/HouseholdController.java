@@ -34,10 +34,10 @@ public class HouseholdController {
 
 
     @PostMapping ("/add-household")
-    public String postAddHousehold(Model model){
+    public String postAddHousehold(Model model, Household household){
         List<Person> people = personService.getPersons();
         model.addAttribute("people", people);
-
+        householdService.addHousehold(household);
         return "management/add-household";
     }
 
