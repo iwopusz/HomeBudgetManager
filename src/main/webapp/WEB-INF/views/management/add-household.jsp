@@ -67,16 +67,18 @@
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary me-2">Zapisz</button>
-                                    <button class="btn btn-light">Anuluj</button>
-
+                                    <!-- <button class="btn btn-light">Anuluj</button> -->
                                 </div>
-                            </form>
-                        </div>
-                    </div>
+                                <div>
 
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
-            <!-- content-wrapper ends -->
+                <!-- content-wrapper ends -->
             <!-- partial:../../partials/_footer.jspf -->
             <%@include file="../../partials/_footer.jspf" %>
             <!-- partial -->

@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import pl.home.paymentsmanagement.model.Household;
 import pl.home.paymentsmanagement.model.Person;
 import pl.home.paymentsmanagement.service.HouseholdService;
@@ -23,8 +24,17 @@ public class HouseholdController {
         this.personService = personService;
     }
 
-    @GetMapping("/add-household")
-    public String getAddHousehold(Model model){
+//    @GetMapping  ("/add-household")
+//    public String getAddHousehold(Model model){
+//        List<Person> people = personService.getPersons();
+//        model.addAttribute("people", people);
+//
+//        return "management/add-household";
+//    }
+
+
+    @PostMapping ("/add-household")
+    public String postAddHousehold(Model model){
         List<Person> people = personService.getPersons();
         model.addAttribute("people", people);
 
