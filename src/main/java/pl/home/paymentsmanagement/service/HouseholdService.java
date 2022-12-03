@@ -1,7 +1,9 @@
 package pl.home.paymentsmanagement.service;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 import pl.home.paymentsmanagement.model.Household;
+import pl.home.paymentsmanagement.model.Person;
 import pl.home.paymentsmanagement.repository.HouseholdRepository;
 
 import java.util.List;
@@ -30,4 +32,10 @@ public class HouseholdService {
     public void editHousehold(Household household){
         householdRepository.save(household);
     }
+
+    public void deleteHousehold(Long id){
+        householdRepository.deleteById(id);
+    }
+
+
 }
