@@ -44,10 +44,16 @@ public class ManageChargerController {
         return "management/editCharger";
     }
 
+    @PostMapping("/editCharger/{id}")
+    public RedirectView saveCharger(Charger charger, @PathVariable("id") Long id) {
+        chargerService.editCharger(charger);
+        return new RedirectView("/chargers");
+    }
+
     @PostMapping ("/addCharger/{id}")
     public RedirectView postEditCharger(Charger editCharger, @PathVariable("id") Long id){
         chargerService.editCharger(editCharger);
-        return new RedirectView("/editCharger/{id}");
+        return new RedirectView("/chargers");
     }
 
     @GetMapping("/deleteCharger/{id}")
@@ -55,20 +61,6 @@ public class ManageChargerController {
         chargerService.deleteCharger(id);
         return new RedirectView("/chargers");
     }
-
-
-//    @GetMapping("/manage/chargers/{id}")
-//    public String getCharger(@PathVariable("id") Long id, Model model) {
-//        Charger charger = chargerService.getCharger(id);
-//        model.addAttribute("charger", charger);
-//        return ("management/editCharger");
-//
-//    }
-//    @PostMapping("/manage/chargers/save/{id}")
-//    public RedirectView saveCharger(Charger charger, @PathVariable("id") Long id) {
-//        chargerService.editCharger(charger);
-//        return new RedirectView("management/chargers");
-//    }
 
 }
 
