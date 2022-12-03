@@ -18,4 +18,19 @@ public class ChargerService {
     public List<Charger> getChargers() {
         return chargerRepository.findAll();
     }
+
+    public void addCharger(Charger charger){
+        chargerRepository.save(charger);
+    }
+
+    public Charger getCharger(Long id){
+        return chargerRepository.findById(id).orElse(null);
+    }
+
+    public void editCharger(Charger charger){
+        chargerRepository.save(charger);
+    }
+
+    public void  deleteCharger(Long id){
+        chargerRepository.deleteById(id); }
 }
