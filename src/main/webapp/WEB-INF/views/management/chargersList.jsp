@@ -59,7 +59,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <c:forEach items="${charger}" var="households">
+                                            <c:forEach items="${charger}" var="charger">
                                                 <tr>
                                                     <td>${charger.id}</td>
                                                     <td>${charger.name}</td>

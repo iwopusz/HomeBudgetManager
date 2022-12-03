@@ -3,83 +3,84 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="../views/index.jsp">
-              <i class="ti-shield menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href='<c:url value="/"/>'>
+                <i class="ti-shield menu-icon"></i>
+                <span class="menu-title">Main</span>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="ti-palette menu-icon"></i>
-              <span class="menu-title">UI Elements</span>
-              <i class="menu-arrow"></i>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#transaction-basic" aria-expanded="false"
+               aria-controls="transaction-basic">
+                <i class="ti-shopping-cart menu-icon"></i>
+                <span class="menu-title">Transakcje</span>
+                <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../views/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../views/ui-features/typography.html">Typography</a></li>
-              </ul>
+            <div class="collapse" id="transaction-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a class="nav-link" href='<c:url value=""/>'>Lista transakcji</a></li>
+                    <li class="nav-item"><a class="nav-link" href='<c:url value="/add-income"/>'>Dodaj przychód</a></li>
+                    <li class="nav-item"><a class="nav-link" href='<c:url value="/add-outcome"/>'>Dodaj rachunek</a>
+                    </li>
+                </ul>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../views/forms/basic_elements.html">
-              <i class="ti-layout-list-post menu-icon"></i>
-              <span class="menu-title">Form elements</span>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#graph-basic" aria-expanded="false"
+               aria-controls="graph-basic">
+                <i class="ti-image menu-icon"></i>
+                <span class="menu-title">Wykresy</span>
+                <i class="menu-arrow"></i>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../views/charts/chartjs.html">
-              <i class="ti-pie-chart menu-icon"></i>
-              <span class="menu-title">Charts</span>
+            <div class="collapse" id="graph-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a class="nav-link" href='<c:url value=""/>'>Coś tu będzie</a></li>
+                    <li class="nav-item"><a class="nav-link" href='<c:url value=""/>'>Coś tu będzie</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#management-basic" aria-expanded="false"
+               aria-controls="management-basic">
+                <i class="ti-direction-alt menu-icon"></i>
+                <span class="menu-title">Zarządzanie</span>
+                <i class="menu-arrow"></i>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../views/tables/basic-table.html">
-              <i class="ti-view-list-alt menu-icon"></i>
-              <span class="menu-title">Tables</span>
+            <div class="collapse" id="management-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a class="nav-link" href='<c:url value="/households"/>'>Lista gospodarstw</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href='<c:url value="/chargers"/>'>Lista dostawców</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href=/manage/users/{1L}>
+                <i class="ti-user menu-icon"></i>
+                <span class="menu-title">Ustawienia kontem</span>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../views/icons/themify.html">
-              <i class="ti-star menu-icon"></i>
-              <span class="menu-title">Icons</span>
-            </a>
-          </li>
-          <li class="nav-item">
+        </li>
+
+        <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="ti-user menu-icon"></i>
-              <span class="menu-title">User Pages</span>
-              <i class="menu-arrow"></i>
+                <i class="ti-user menu-icon"></i>
+                <span class="menu-title">User Pages</span>
+                <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../views/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../views/samples/login-2.html"> Login 2 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../views/samples/register.html"> Register </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../views/samples/register-2.html"> Register 2 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../views/samples/lock-screen.html"> Lockscreen </a></li>
-              </ul>
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login-2.html"> Login 2 </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/register-2.html"> Register 2 </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/lock-screen.html"> Lockscreen </a></li>
+                </ul>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="documentation/documentation.html">
-              <i class="ti-write menu-icon"></i>
-              <span class="menu-title">Documentation</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/manage/users">
-              <i class="ti-pie-chart menu-icon"></i>
-              <span class="menu-title">Lista userów</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href='<c:url value="/chargers"/>'>
-              <i class="ti-pie-chart menu-icon"></i>
-              <span class="menu-title">Lista dostawców</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+        </li>
+
+    </ul>
+</nav>
