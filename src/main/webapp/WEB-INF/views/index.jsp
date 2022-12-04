@@ -8,9 +8,6 @@
 <%@include file="../partials/_headTag.jspf" %>
 <body>
   <div class="container-scroller">
-    <div class="row p-0 m-0 proBanner" id="proBanner">
-      <div class="col-md-12 p-0 m-0">
-      </div>
     </div>
     <!-- partial:partials/_navbar.jspf -->
     <%@include file="../partials/_navbar.jspf" %>
