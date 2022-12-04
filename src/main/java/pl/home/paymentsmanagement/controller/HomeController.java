@@ -22,5 +22,16 @@ public class HomeController {
         return "index_original_source";
     }
 
+    @GetMapping("/login")
+    public String getLogin(){
+        return "/samples/login";
+    }
+
+    @GetMapping("/lock")
+    public String getLock(){return "/samples/lock-screen";}
+
+    @GetMapping("/register")
+    public String getRegister(){return "/samples/register";}
+
 
 }

@@ -229,11 +229,11 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="samples/login.html"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="samples/login.jsp"> Login </a></li>
                 <li class="nav-item"> <a class="nav-link" href="samples/login-2.html"> Login 2 </a></li>
                 <li class="nav-item"> <a class="nav-link" href="samples/register.html"> Register </a></li>
-                <li class="nav-item"> <a class="nav-link" href="samples/register-2.html"> Register 2 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="samples/lock-screen.html"> Lockscreen </a></li>
+                <li class="nav-item"> <a class="nav-link" href="samples/register.jsp"> Register 2 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="samples/lock-screen.jsp"> Lockscreen </a></li>
               </ul>
             </div>
           </li>

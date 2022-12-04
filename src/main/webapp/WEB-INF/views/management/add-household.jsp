@@ -5,11 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<
 <%@include file="../../partials/_headTag.jspf" %>
->
-
 <body>
 <div class="container-scroller">
     <!-- partial:../../partials/_navbar.jspf -->
