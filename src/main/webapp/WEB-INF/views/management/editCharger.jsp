@@ -26,7 +26,7 @@
                                     <!--  ja tym bardziej -->
                                 </p>
                                 <form method="post" id="charger-data"
-                                      action='<c:url value="${charger.id}"/>'>
+                                      action='<c:url value="/editCharger/${charger.id}"/>'>
                                     <div class="form-group">
                                         <label for="name">Nazwa</label>
                                         <input class="form-control" type="text"
