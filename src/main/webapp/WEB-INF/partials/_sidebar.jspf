@@ -6,8 +6,8 @@
     <ul class="nav">
         <li class="nav-item">
             <a class="nav-link" href='<c:url value="/"/>'>
-                <i class="ti-shield menu-icon"></i>
-                <span class="menu-title">Main</span>
+                <i class="ti-home menu-icon"></i>
+                <span class="menu-title">Home</span>
             </a>
         </li>
         <li class="nav-item">
@@ -30,7 +30,7 @@
         <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#graph-basic" aria-expanded="false"
                aria-controls="graph-basic">
-                <i class="ti-image menu-icon"></i>
+                <i class="ti-bar-chart-alt menu-icon"></i>
                 <span class="menu-title">Wykresy</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -45,7 +45,7 @@
         <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#management-basic" aria-expanded="false"
                aria-controls="management-basic">
-                <i class="ti-direction-alt menu-icon"></i>
+                <i class="ti-panel menu-icon"></i>
                 <span class="menu-title">Zarządzanie</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -54,13 +54,15 @@
                     <li class="nav-item"><a class="nav-link" href='<c:url value="/households"/>'>Lista gospodarstw</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href='<c:url value="/chargers"/>'>Lista dostawców</a></li>
+                    <li class="nav-item"><a class="nav-link" href='<c:url value="/users"/>'>*Lista użytkowników*</a>
+                    </li>
                 </ul>
             </div>
         </li>
 
         <li class="nav-item">
             <a class="nav-link" href=/manage/users/{1L}>
-                <i class="ti-user menu-icon"></i>
+                <i class="ti-settings menu-icon"></i>
                 <span class="menu-title">Ustawienia kontem</span>
             </a>
         </li>
@@ -73,11 +75,11 @@
             </a>
             <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login-2.html"> Login 2 </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/register-2.html"> Register 2 </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/lock-screen.html"> Lockscreen </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../samples/login.html"> Login </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../samples/login-2.html"> Login 2 </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../samples/register.html"> Register </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../samples/register-2.html"> Register 2 </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../samples/lock-screen.html"> Lockscreen </a></li>
                 </ul>
             </div>
         </li>
