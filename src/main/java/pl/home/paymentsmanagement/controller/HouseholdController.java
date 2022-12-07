@@ -49,7 +49,7 @@ public class HouseholdController {
 
 
 
-    @GetMapping("/edit-household/{id}")
+    @GetMapping ("/edit-household/{id}")
     public String getEditHousehold(@PathVariable("id") Long id, Model model){
         List<Person> people = personService.getPersonByHouseholdId(id);
 
@@ -65,6 +65,12 @@ public class HouseholdController {
         Household household = householdService.getHousehold(id);
         model.addAttribute("household", household);
         return "management/edit-household";
+    }
+
+    @PostMapping ("/edit-household/{id}")
+    public RedirectView postEditHousehold(@PathVariable("id") Long id, Household editHousehold){
+        householdService.addHousehold(editHousehold);
+        return new RedirectView("/households");
     }
 
     @GetMapping("/deleteHousehold/{id}")

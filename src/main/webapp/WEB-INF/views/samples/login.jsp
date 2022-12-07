@@ -17,28 +17,28 @@
                 <img src="../../../resources/images/logo.svg" alt="logo">
               </div>
               <h4>Cześć! Zaczynajmy!</h4>
-              <h6 class="font-weight-light">Zaloguj się aby kontynuować</h6>
-              <form class="pt-3">
+              <h6 class="font-weight-light">Zaloguj się, aby kontynuować</h6>
+              <form class="pt-3" method="post" action='<c:url value="/login"/>'>
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Login">
+                  <input type="email" class="form-control form-control-lg" id="exampleLogin" name="userName" placeholder="Login">
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Hasło">
+                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" name="password" placeholder="Hasło">
                 </div>
                 <div class="mt-3">
-                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../index.jsp">Zaloguj</a>
+                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="'<c:url value="/"/>'>Zaloguj</a>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                   <div class="form-check">
                     <label class="form-check-label text-muted">
                       <input type="checkbox" class="form-check-input">
-                      Nie wylogowuj mnie
+                      Zapamiętaj mnie
                     </label>
                   </div>
                   <a href="#" class="auth-link text-black">Zapomniałeś hasła?</a>
                 </div>
                 <div class="text-center mt-4 font-weight-light">
-                  Nie masz konta? <a href="register.html" class="text-primary">Utwórz</a>
+                  Nie masz konta? <a href='<c:url value="/register"/>' class="text-primary">Utwórz</a>
                 </div>
               </form>
             </div>

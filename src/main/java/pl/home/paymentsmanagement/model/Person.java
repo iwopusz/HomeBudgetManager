@@ -1,9 +1,10 @@
 package pl.home.paymentsmanagement.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,6 +20,12 @@ public class Person {
     private String lastName;
     private String email;
     private String password;
+
+//    @Column(name = "person_type")
+//    @Enumerated(EnumType.STRING)
+    private String personType;
+
+    private boolean enabled;
 
     @ManyToMany(mappedBy = "people")
     private Set<Household> households;

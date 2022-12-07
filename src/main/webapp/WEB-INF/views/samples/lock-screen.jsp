@@ -17,13 +17,13 @@
               <form class="pt-5">
                 <div class="form-group">
                   <label for="examplePassword1">Hasło do odblokowania</label>
-                  <input type="password" class="form-control text-center" id="examplePassword1" placeholder="Hasło">
+                  <input type="password" class="form-control text-center" id="examplePassword1" name="password" placeholder="Hasło">
                 </div>
                 <div class="mt-5">
-                  <a class="btn btn-block btn-success btn-lg font-weight-medium" href="../index.jsp">Odblokuj</a>
+                  <a class="btn btn-block btn-success btn-lg font-weight-medium" href='<c:url value="/"/>'>Odblokuj</a>
                 </div>
                 <div class="mt-3 text-center">
-                  <a href="#" class="auth-link text-white">Zaloguj na inne konto</a>
+                  <a href='<c:url value="/login"/>' class="auth-link text-white">Zaloguj na inne konto</a>
                 </div>
               </form>
             </div>
