@@ -18,25 +18,28 @@
               </div>
               <h4>Cześć! Zaczynajmy!</h4>
               <h6 class="font-weight-light">Zaloguj się, aby kontynuować</h6>
-              <form class="pt-3" method="post" action='<c:url value="/login"/>'>
+              <form class="pt-3" id="loginForm" method="post" action='<c:url value="/login"/>'>
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-lg" id="exampleLogin" name="userName" placeholder="Login">
+                  <input type="text" class="form-control form-control-lg" id="exampleLogin" name="username" placeholder="Login">
                 </div>
                 <div class="form-group">
                   <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" name="password" placeholder="Hasło">
+                    <input type="hidden"
+                           name="${_csrf.parameterName}"
+                           value="${_csrf.token}"/>
                 </div>
                 <div class="mt-3">
-                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" />'>Zaloguj</a>
+                  <button type="submit" form="loginForm" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">Zaloguj</button>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                   <div class="form-check">
-                    <label class="form-check-label text-muted">
-                      <input type="checkbox" class="form-check-input">
-                      Zapamiętaj mnie
-                    </label>
-                  </div>
-                  <a href="#" class="auth-link text-black">Zapomniałeś hasła?</a>
-                </div>
+<%--                    <label class="form-check-label text-muted">--%>
+<%--                      <input type="checkbox" class="form-check-input">--%>
+<%--                      Zapamiętaj mnie--%>
+<%--                    </label>--%>
+<%--                  </div>--%>
+<%--                  <a href="#" class="auth-link text-black">Zapomniałeś hasła?</a>--%>
+<%--                </div>--%>
                 <div class="text-center mt-4 font-weight-light">
                   Nie masz konta? <a href='<c:url value="/register"/>' class="text-primary">Utwórz</a>
                 </div>
