@@ -33,18 +33,18 @@ public class HouseholdController {
         return "management/add-household";
     }
 
-
-    @GetMapping("/households")
-    public String getHouseholdList(Model model){
-        List<Household> householdList = householdService.getHouseholdList();
-        model.addAttribute("household", householdList);
-        return "management/household-list";
+    @PostMapping("/add-household")
+    public RedirectView postAddHousehold(Household household){
+        householdService.addHousehold(household);
+        return new RedirectView( "/households");
     }
 
-    @PostMapping ("/add-household")
-    public String postAddHousehold( Household household){
-        householdService.addHousehold(household);
-        return "management/add-household";
+
+    @GetMapping("/households")
+    public RedirectView getHouseholdList(Model model){
+        List<Household> householdList = householdService.getHouseholdList();
+        model.addAttribute("household", householdList);
+        return new RedirectView("management/household-list");
     }
 
 
