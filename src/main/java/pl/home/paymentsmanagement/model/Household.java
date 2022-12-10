@@ -1,9 +1,10 @@
 package pl.home.paymentsmanagement.model;
 
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
 
 import java.math.BigDecimal;
 import java.util.HashSet;
