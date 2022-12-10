@@ -15,6 +15,7 @@ import pl.home.paymentsmanagement.service.HistoryService;
 import pl.home.paymentsmanagement.service.HouseholdService;
 import pl.home.paymentsmanagement.service.PersonService;
 
+import java.security.Principal;
 import java.util.List;
 
 @Controller
@@ -33,13 +34,13 @@ public class HistoryController {
     }
 
     @ModelAttribute("historyPage")
-    public Page<Transaction> getHistory(@PageableDefault(size = 3) Pageable page) {
-        return historyService.findAllOrderedByTransactionDate(page);
+    public Page<Transaction> getHistory(@PageableDefault(size = 3) Pageable page, Principal principal) {
+        return historyService.findAllOrderedByTransactionDate(principal.getName(), page);
     }
 
     @ModelAttribute("history")
-    public List<Transaction> getHistoryList(@PageableDefault(size = 3) Pageable page) {
-        return getHistory(page).getContent();
+    public List<Transaction> getHistoryList(@PageableDefault(size = 3) Pageable page, Principal principal) {
+        return getHistory(page, principal).getContent();
     }
 
     @ModelAttribute("households")

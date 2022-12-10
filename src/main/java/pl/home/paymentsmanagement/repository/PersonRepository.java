@@ -14,4 +14,6 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
 
     @Query("SELECT DISTINCT p FROM household h JOIN h.people p WHERE h.id = :id ")
     List<Person> findAllPersonsHouseholds(Long id);
+
+    Person findByUserName(String username);
 }
