@@ -44,6 +44,9 @@
                                     </div>
 
                                     <button type="submit" form="add-charger" class="btn btn-primary me-2">Zapisz
+                                        <input type="hidden"
+                                               name="${_csrf.parameterName}"
+                                               value="${_csrf.token}"/>
                                     </button>
                                     <a class="btn btn-light" href='<c:url value="/chargers"/>' role="button">Anuluj</a>
                                 </form>

@@ -95,6 +95,9 @@
                                     </div>
                                     <div class="card-footer">
                                             <input type="submit" class="btn btn-success col-sm-1" style="margin: 10px" value="Zapisz">
+                                        <input type="hidden"
+                                               name="${_csrf.parameterName}"
+                                               value="${_csrf.token}"/>
                                             <input type="submit" class="btn btn-danger col-sm-1" style="margin: 10px" value="Usuń">
                                     </div>
                                 </form>

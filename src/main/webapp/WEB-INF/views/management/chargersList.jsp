@@ -57,6 +57,9 @@
                                         </table>
                                         <br>
                                         <a href='<c:url value="/addCharger"/>' class="btn btn-outline-success" role="button">Dodaj nowego</a>
+                                        <input type="hidden"
+                                               name="${_csrf.parameterName}"
+                                               value="${_csrf.token}"/>
                                     </div>
                                 </div>
                             </div>
