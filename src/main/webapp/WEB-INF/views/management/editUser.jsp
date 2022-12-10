@@ -59,6 +59,9 @@
                         >
                       </div>
                     <button type="submit" form="user-data" class="btn btn-primary me-2">Zapisz</button>
+                      <input type="hidden"
+                             name="${_csrf.parameterName}"
+                             value="${_csrf.token}"/>
                     <button class="btn btn-light">Anuluj</button>
                   </form>
                 </div>

@@ -24,6 +24,9 @@
                 </div>
                 <div class="mt-3 text-center">
                   <a href='<c:url value="/login"/>' class="auth-link text-white">Zaloguj na inne konto</a>
+                  <input type="hidden"
+                         name="${_csrf.parameterName}"
+                         value="${_csrf.token}"/>
                 </div>
               </form>
             </div>

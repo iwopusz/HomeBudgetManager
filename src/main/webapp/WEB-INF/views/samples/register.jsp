@@ -88,6 +88,9 @@
                 </div>
                 <div class="text-center mt-4 font-weight-light">
                   Masz już konto? <a href='<c:url value="/login"/>' class="text-primary">Zaloguj</a>
+                  <input type="hidden"
+                         name="${_csrf.parameterName}"
+                         value="${_csrf.token}"/>
                 </div>
               </form>
             </div>
