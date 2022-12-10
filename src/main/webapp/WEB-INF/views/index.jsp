@@ -20,7 +20,7 @@
       <!-- partial:partials/_sidebar.jspf -->
       <%@include file="../partials/_sidebar.jspf" %>
       <!-- partial -->
-      ${person}
+<%--      ${person}--%>
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">

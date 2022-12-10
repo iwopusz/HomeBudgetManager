@@ -26,7 +26,7 @@
                   <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" name="password" placeholder="Hasło">
                 </div>
                 <div class="mt-3">
-                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="'<c:url value="/"/>'>Zaloguj</a>
+                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" />'>Zaloguj</a>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                   <div class="form-check">

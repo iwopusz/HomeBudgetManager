@@ -9,6 +9,8 @@ import pl.home.paymentsmanagement.model.Person;
 import pl.home.paymentsmanagement.repository.LoginRepository;
 import pl.home.paymentsmanagement.security.LoginDetailsSecurity;
 
+import java.util.Optional;
+
 
 @Service
 public class LoginDetailService implements UserDetailsService {
@@ -16,13 +18,15 @@ public class LoginDetailService implements UserDetailsService {
     @Autowired
     private LoginRepository loginRepository;
 
-
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Person person = loginRepository.getPersonByLogin(username);
-        if(person==null){
-            throw new UsernameNotFoundException("Could not find user");
+    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+        Person person = loginRepository.getPersonByLogin(userName);
+
+        if(person == null){
+            throw new UsernameNotFoundException("Could not find");
         }
+
         return new LoginDetailsSecurity(person);
+
     }
 }
