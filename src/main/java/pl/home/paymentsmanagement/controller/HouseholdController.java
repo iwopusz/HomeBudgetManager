@@ -41,10 +41,10 @@ public class HouseholdController {
 
 
     @GetMapping("/households")
-    public RedirectView getHouseholdList(Model model){
+    public String getHouseholdList(Model model){
         List<Household> householdList = householdService.getHouseholdList();
         model.addAttribute("household", householdList);
-        return new RedirectView("management/household-list");
+        return "management/household-list";
     }
 
 
