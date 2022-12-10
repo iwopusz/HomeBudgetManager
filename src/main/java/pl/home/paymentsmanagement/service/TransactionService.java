@@ -1,11 +1,17 @@
 package pl.home.paymentsmanagement.service;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Service;
 import pl.home.paymentsmanagement.model.Household;
 import pl.home.paymentsmanagement.model.Transaction;
 import pl.home.paymentsmanagement.model.TransactionType;
 import pl.home.paymentsmanagement.repository.HouseholdRepository;
 import pl.home.paymentsmanagement.repository.TransactionRepository;
+
+import java.util.List;
 
 @Service
 public class TransactionService {
