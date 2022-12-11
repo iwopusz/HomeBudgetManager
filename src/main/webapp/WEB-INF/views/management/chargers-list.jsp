@@ -12,8 +12,8 @@
     <%@include file="../../partials/_navbar.jspf" %>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
-        <!-- partial:partials/_sidebar.jspf -->
-        <%@include file="../../partials/_sidebar.jspf" %>
+        <!-- partial:partials/_sidebar.jsp -->
+        <%@include file="../../partials/_sidebar.jsp" %>
         <!-- partial -->
 
         <!-- DataTales Example -->
