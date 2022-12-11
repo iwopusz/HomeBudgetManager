@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <jsp:useBean id="now" class="java.util.Date"/>
 <%@ page contentType="text/html; charset=UTF-8" %>
 
@@ -24,12 +24,11 @@
             <div class="col-md-12 grid-margin">
               <div class="d-flex justify-content-between align-items-center">
                 <div>
-                  <h4 class="font-weight-bold mb-0">RoyalUI Dashboard</h4>
-                </div>
-                <div>
-                    <button type="button" class="btn btn-primary btn-icon-text btn-rounded">
-                      <i class="ti-clipboard btn-icon-prepend"></i>Report
-                    </button>
+                  <h4 class="font-weight-medium mb-0">
+                    <security:authorize access="isAuthenticated()">
+                      Witaj <security:authentication property="principal.username" />
+                    </security:authorize>
+                  </h4>
                 </div>
               </div>
             </div>
@@ -346,6 +345,9 @@
             </div>
           </div>
         </div>
+        <input type="hidden"
+               name="${_csrf.parameterName}"
+               value="${_csrf.token}"/>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.jspf -->
         <%@include file="../partials/_footer.jspf" %>
