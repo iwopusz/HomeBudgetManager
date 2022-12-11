@@ -53,6 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception{
         http.authorizeRequests().antMatchers("/login*").permitAll()
+                .antMatchers("/h2-console/**").permitAll()
                 .anyRequest().fullyAuthenticated()
                 .and()
                 .formLogin().permitAll()
@@ -64,6 +65,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                 .permitAll();
 
-
+                http.csrf().ignoringAntMatchers("/h2-console/**");
+                http.headers().frameOptions().sameOrigin();
     }
 }
