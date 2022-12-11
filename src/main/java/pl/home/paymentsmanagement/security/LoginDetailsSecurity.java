@@ -35,6 +35,22 @@ public class LoginDetailsSecurity implements UserDetails {
         return person.getUserName();
     }
 
+    public String getUserFirstName(){
+        return person.getFirstName();
+    }
+
+    public Long getUserId(){
+        return person.getId();
+    }
+
+    public String getUserLastName(){
+        return person.getLastName();
+    }
+
+    public String getUserEmail(){
+        return person.getEmail();
+    }
+
     @Override
     public boolean isAccountNonExpired() {
         return true;

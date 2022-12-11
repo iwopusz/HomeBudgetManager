@@ -55,16 +55,16 @@
                     <li class="nav-item"><a class="nav-link" href='<c:url value="/households"/>'>Lista gospodarstw</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href='<c:url value="/chargers"/>'>Lista dostawców</a></li>
-                    <li class="nav-item"><a class="nav-link" href='<c:url value="/users"/>'>*Lista użytkowników*</a>
+                    <li class="nav-item"><a class="nav-link" href='<c:url value="/manage/users/"/>'>*Lista użytkowników*</a>
                     </li>
                 </ul>
             </div>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href=/manage/users/{1L}>
+            <a class="nav-link" href='<c:url value="/manage/users/${param.id}"/>'>
                 <i class="ti-settings menu-icon"></i>
-                <span class="menu-title">Ustawienia kontem</span>
+                <span class="menu-title" >Ustawienia konta</span>
             </a>
         </li>
 

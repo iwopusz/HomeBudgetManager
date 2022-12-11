@@ -14,8 +14,10 @@
     <%@include file="../partials/_navbar.jspf" %>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
-      <!-- partial:partials/_sidebar.jspf -->
-      <%@include file="../partials/_sidebar.jspf" %>
+      <!-- partial:partials/_sidebar.jsp -->
+      <jsp:include page="../partials/_sidebar.jsp" >
+      <jsp:param name="id" value="${loggedUser.userId}"/>
+      </jsp:include>
       <!-- partial -->
 <%--      ${person}--%>
       <div class="main-panel">
@@ -25,10 +27,7 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div>
                   <h4 class="font-weight-medium mb-0">
-                    <security:authorize access="isAuthenticated()">
-                      Witaj <security:authentication property="principal.username" />
-                    </security:authorize>
-                  </h4>
+                    Witaj ${loggedUser.userFirstName} ${loggedUser.userLastName} </h4>
                 </div>
               </div>
             </div>
