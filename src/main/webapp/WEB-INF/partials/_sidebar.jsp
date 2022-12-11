@@ -20,7 +20,7 @@
             </a>
             <div class="collapse" id="transaction-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a class="nav-link" href='<c:url value=""/>'>Lista transakcji</a></li>
+                    <li class="nav-item"><a class="nav-link" href='<c:url value="/history"/>'>Lista transakcji</a></li>
                     <li class="nav-item"><a class="nav-link" href='<c:url value="/add-income"/>'>Dodaj przychód</a></li>
                     <li class="nav-item"><a class="nav-link" href='<c:url value="/add-outcome"/>'>Dodaj rachunek</a>
                     </li>
@@ -62,7 +62,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href=/manage/users/{1L}>
+            <a class="nav-link" href='<c:url value="/editPerson/${param.id}"/>' >
                 <i class="ti-settings menu-icon"></i>
                 <span class="menu-title">Ustawienia kontem</span>
             </a>
