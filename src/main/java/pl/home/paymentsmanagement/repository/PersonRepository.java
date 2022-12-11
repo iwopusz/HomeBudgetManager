@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import pl.home.paymentsmanagement.model.Person;
+import pl.home.paymentsmanagement.model.PersonType;
 
 import java.util.List;
 
@@ -16,4 +17,5 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
     List<Person> findAllPersonsHouseholds(Long id);
 
     Person findByUserName(String username);
+
 }

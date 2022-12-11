@@ -15,7 +15,7 @@ import java.util.List;
 
 @Controller
 @AllArgsConstructor
-public class ManageChargerController {
+public class ChargerController {
 
     private final ChargerService chargerService;
 
@@ -23,12 +23,12 @@ public class ManageChargerController {
     public String getChargersList(Model model){
         List<Charger> chargerList = chargerService.getChargers();
         model.addAttribute("charger",chargerList);
-        return "management/chargersList";
+        return "management/chargers-list";
     }
 
     @GetMapping("/addCharger")
     public String getAddCharger(){
-        return "management/addCharger";
+        return "management/add-charger";
     }
 
     @PostMapping ("/addCharger")
@@ -41,7 +41,7 @@ public class ManageChargerController {
     public String getEditCharger(@PathVariable("id") Long id, Model model){
         Charger charger = chargerService.getCharger(id);
         model.addAttribute("charger", charger);
-        return "management/editCharger";
+        return "management/edit-charger";
     }
 
     @PostMapping("/editCharger/{id}")
