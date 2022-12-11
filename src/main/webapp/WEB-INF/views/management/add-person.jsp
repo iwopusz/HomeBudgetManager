@@ -13,7 +13,7 @@
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_sidebar.jspf -->
-        <%@include file="../../partials/_sidebar.jspf" %>
+        <%@include file="../../partials/_sidebar.jsp" %>
         <!-- partial -->
         <div class="main-panel">
             <div class="content-wrapper">
