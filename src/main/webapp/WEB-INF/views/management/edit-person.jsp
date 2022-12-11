@@ -25,7 +25,7 @@
                                 <p class="card-description">
                                     <!--  ja tym bardziej -->
                                 </p>
-                                <form method="post" id="charger-data"
+                                <form method="post" id="person-data"
                                       action='<c:url value="/editPerson/${person.id}"/>'>
                                     <div class="form-group">
                                         <label for="firstName">Imię</label>
@@ -76,7 +76,7 @@
                                         >
                                     </div>
 
-                                    <button type="submit" form="charger-data" class="btn btn-primary me-2">Zapisz
+                                    <button type="submit" form="person-data" class="btn btn-primary me-2">Zapisz
                                     </button>
                                     <input type="hidden"
                                            name="${_csrf.parameterName}"
