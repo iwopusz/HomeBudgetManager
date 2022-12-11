@@ -67,5 +67,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
                 http.csrf().ignoringAntMatchers("/h2-console/**");
                 http.headers().frameOptions().sameOrigin();
+
+                //Dodanie dostępu do H2
     }
 }
